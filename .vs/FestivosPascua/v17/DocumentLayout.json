@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA070B40-A57E-435D-98E2-ADB75F763B9F}|FestivosPascua.Dominio\\FestivosPascua.Dominio.csproj|c:\\users\\davinson\\onedrive\\escritorio\\festivospascua\\festivospascua.dominio\\entidades\\clstipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA070B40-A57E-435D-98E2-ADB75F763B9F}|FestivosPascua.Dominio\\FestivosPascua.Dominio.csproj|solutionrelative:festivospascua.dominio\\entidades\\clstipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA070B40-A57E-435D-98E2-ADB75F763B9F}|FestivosPascua.Dominio\\FestivosPascua.Dominio.csproj|c:\\users\\davinson\\onedrive\\escritorio\\festivospascua\\festivospascua.dominio\\entidades\\clsfestivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA070B40-A57E-435D-98E2-ADB75F763B9F}|FestivosPascua.Dominio\\FestivosPascua.Dominio.csproj|solutionrelative:festivospascua.dominio\\entidades\\clsfestivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7F316D0-2B8B-4857-891F-3C8590A19164}|FestivosPascua.Persistencia\\FestivosPascua.Persistencia.csproj|c:\\users\\davinson\\onedrive\\escritorio\\festivospascua\\festivospascua.persistencia\\contexto\\clsfestivospascuacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7F316D0-2B8B-4857-891F-3C8590A19164}|FestivosPascua.Persistencia\\FestivosPascua.Persistencia.csproj|solutionrelative:festivospascua.persistencia\\contexto\\clsfestivospascuacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClsFestivosPascuaContext.cs",
+              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\FestivosPascua.Persistencia\\Contexto\\ClsFestivosPascuaContext.cs",
+              "RelativeDocumentMoniker": "FestivosPascua.Persistencia\\Contexto\\ClsFestivosPascuaContext.cs",
+              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\FestivosPascua.Persistencia\\Contexto\\ClsFestivosPascuaContext.cs",
+              "RelativeToolTip": "FestivosPascua.Persistencia\\Contexto\\ClsFestivosPascuaContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T02:26:31.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClsFestivos.cs",
+              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\FestivosPascua.Dominio\\Entidades\\ClsFestivos.cs",
+              "RelativeDocumentMoniker": "FestivosPascua.Dominio\\Entidades\\ClsFestivos.cs",
+              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\FestivosPascua.Dominio\\Entidades\\ClsFestivos.cs",
+              "RelativeToolTip": "FestivosPascua.Dominio\\Entidades\\ClsFestivos.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T02:23:52.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ClsTipo.cs",
+              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\FestivosPascua.Dominio\\Entidades\\ClsTipo.cs",
+              "RelativeDocumentMoniker": "FestivosPascua.Dominio\\Entidades\\ClsTipo.cs",
+              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\FestivosPascua.Dominio\\Entidades\\ClsTipo.cs",
+              "RelativeToolTip": "FestivosPascua.Dominio\\Entidades\\ClsTipo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-27T02:23:42.574Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
