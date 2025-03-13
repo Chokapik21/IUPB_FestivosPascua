@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\FestivosPascua.Dominio",
+    "\\FestivosPascua.Dominio\\Entidades",
+    "\\FestivosPascua.Persistencia",
+    "\\FestivosPascua.Persistencia\\Contexto"
+  ],
+  "SelectedNode": "\\FestivosPascua.Persistencia\\Contexto\\ClsFestivosPascuaContext.cs",
+  "PreviewInSolutionExplorer": false
+}
