@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\",
+  "WorkspaceRootPath": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4561B9B-C79E-4394-B69C-EE9FEF06BDF7}|FestivosPascua.csproj|c:\\users\\davinson\\onedrive\\escritorio\\festivospascua\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4561B9B-C79E-4394-B69C-EE9FEF06BDF7}|FestivosPascua.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BC85395-9514-4EB5-812D-EF980024B2F4}|FestivosPascua.Core\\FestivosPascua.Core.csproj|c:\\users\\davinson\\onedrive\\escritorio\\iupb_festivospascua\\festivospascua.core\\repositorios\\ifestivosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BC85395-9514-4EB5-812D-EF980024B2F4}|FestivosPascua.Core\\FestivosPascua.Core.csproj|solutionrelative:festivospascua.core\\repositorios\\ifestivosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BC85395-9514-4EB5-812D-EF980024B2F4}|FestivosPascua.Core\\FestivosPascua.Core.csproj|c:\\users\\davinson\\onedrive\\escritorio\\iupb_festivospascua\\festivospascua.core\\servicios\\ifestivosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BC85395-9514-4EB5-812D-EF980024B2F4}|FestivosPascua.Core\\FestivosPascua.Core.csproj|solutionrelative:festivospascua.core\\servicios\\ifestivosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{43073296-CB19-4745-9B48-1D940355F6B0}|FestivosPascua.Infrastructura\\FestivosPascua.Infrastructura.csproj|c:\\users\\davinson\\onedrive\\escritorio\\iupb_festivospascua\\festivospascua.infrastructura\\festivosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43073296-CB19-4745-9B48-1D940355F6B0}|FestivosPascua.Infrastructura\\FestivosPascua.Infrastructura.csproj|solutionrelative:festivospascua.infrastructura\\festivosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +30,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\FestivosPascua\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IFestivosServicio.cs",
+              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Core\\Servicios\\IFestivosServicio.cs",
+              "RelativeDocumentMoniker": "FestivosPascua.Core\\Servicios\\IFestivosServicio.cs",
+              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Core\\Servicios\\IFestivosServicio.cs",
+              "RelativeToolTip": "FestivosPascua.Core\\Servicios\\IFestivosServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T02:19:14.801Z",
+              "WhenOpened": "2025-03-15T17:42:43.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IFestivosRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Core\\Repositorios\\IFestivosRepositorio.cs",
+              "RelativeDocumentMoniker": "FestivosPascua.Core\\Repositorios\\IFestivosRepositorio.cs",
+              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Core\\Repositorios\\IFestivosRepositorio.cs",
+              "RelativeToolTip": "FestivosPascua.Core\\Repositorios\\IFestivosRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T17:40:05.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FestivosRepositorio.cs",
+              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
+              "RelativeDocumentMoniker": "FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
+              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
+              "RelativeToolTip": "FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:52:33.798Z",
               "EditorCaption": ""
             }
           ]

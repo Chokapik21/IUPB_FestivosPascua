@@ -1,8 +1,6 @@
 ﻿using FestivosPascua.Dominio.Entidades;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
-namespace FestivosPascua.Aplicacion.Servicios
+namespace FestivosPascua.Core.Servicios
 {
     public interface IFestivoServicio
     {

@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FestivosPascua.Persistencia
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FestivosPascua.Core", "FestivosPascua.Core\FestivosPascua.Core.csproj", "{4BC85395-9514-4EB5-812D-EF980024B2F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Festivos.pascua.Aplicaion", "Festivos.pascua.aplicaion\Festivos.pascua.Aplicaion.csproj", "{3B419E11-F9FE-4F50-BA9F-49487427ACEC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FestivosPascua.Infrastructura", "FestivosPascua.Infrastructura\FestivosPascua.Infrastructura.csproj", "{43073296-CB19-4745-9B48-1D940355F6B0}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{4BC85395-9514-4EB5-812D-EF980024B2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BC85395-9514-4EB5-812D-EF980024B2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BC85395-9514-4EB5-812D-EF980024B2F4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B419E11-F9FE-4F50-BA9F-49487427ACEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B419E11-F9FE-4F50-BA9F-49487427ACEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B419E11-F9FE-4F50-BA9F-49487427ACEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B419E11-F9FE-4F50-BA9F-49487427ACEC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43073296-CB19-4745-9B48-1D940355F6B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{43073296-CB19-4745-9B48-1D940355F6B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43073296-CB19-4745-9B48-1D940355F6B0}.Release|Any CPU.ActiveCfg = Release|Any CPU

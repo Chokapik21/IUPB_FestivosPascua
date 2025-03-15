@@ -1,63 +1,72 @@
-﻿using FestivosPascua.Dominio.Entidades;
-using FestivosPascua.Core.Repositorios;
-using Microsoft.EntityFrameworkCore;
+﻿using FestivosPascua.Core.Repositorio;
+using FestivosPascua.Dominio.Entidades;
 using FestivosPascua.Persistencia.Contexto;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FestivosPascua.Aplicacion.Repositorio;
+using Microsoft.EntityFrameworkCore;
 
 namespace FestivosPascua.Infraestructura.Repositorios
 {
-    public class FestivosRepositorio : IFestivosRepositorio
+    public class FestivosRepositorio : IFestivoRepositorio
     {
-        private readonly ClsFestivosPascuaContext contexto;
+        private readonly ClsFestivosPascuaContext Context;
 
-        public FestivosRepositorio(ClsFestivosPascuaContext contexto)
+        public FestivosRepositorio(ClsFestivosPascuaContext Context)
         {
-            this.contexto = contexto;
+            this.Context = Context;
         }
 
         public async Task<ClsFestivos> Agregar(ClsFestivos festivo)
         {
-            contexto.Festivos.Add(festivo);
-            await contexto.SaveChangesAsync();
+            Context.Festivos.Add(festivo);
+            await Context.SaveChangesAsync();
             return festivo;
         }
 
-        public async Task<IEnumerable<ClsFestivos>> Buscar(int tipo, string dato)
+        public async Task<IEnumerable<ClsFestivos>> Buscar(int Tipo, string Dato)
         {
-            return await contexto.Festivos
-                .Where(f => f.IdTipo == tipo && f.Nombre.Contains(dato))
+            return await Context.Festivos
+                .Where(f => f.IdTipo == Tipo && f.Nombre.Contains(Dato))
                 .ToListAsync();
         }
 
-        public async Task<bool> Eliminar(int id)
+        public async Task<bool> Eliminar(int Id)
         {
-            var festivo = await contexto.Festivos.FindAsync(id);
-            if (festivo == null) return false;
+            var festivoExistente = await Context.Festivos.FindAsync(Id);
+            if (festivoExistente == null)
+            {
+                return false;
+            }
+            try
+            {
+                Context.Festivos.Remove(festivoExistente);
+                await Context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception)
+            {
 
-            contexto.Festivos.Remove(festivo);
-            await contexto.SaveChangesAsync();
-            return true;
+                throw;
+            }
         }
 
         public async Task<ClsFestivos> Modificar(ClsFestivos festivo)
         {
-            contexto.Festivos.Update(festivo);
-            await contexto.SaveChangesAsync();
+            var festivoExistente = await Context.Festivos.FindAsync(festivo.Id);
+            if (festivoExistente == null) return null;
+            
+            Context.Festivos.Update(festivo);
+            await Context.SaveChangesAsync();
             return festivo;
         }
 
-        public async Task<ClsFestivos> Obtener(int id)
+        public async Task<ClsFestivos> Obtener(int Id)
         {
-            return await contexto.Festivos.Include(f => f.TipoDias)
-                                          .FirstOrDefaultAsync(f => f.Id == id);
+            return await Context.Festivos.Include(f => f.TipoDias)
+                                         .FirstOrDefaultAsync(f => f.Id == Id);
         }
 
         public async Task<IEnumerable<ClsFestivos>> ObtenerTodos()
         {
-            return await contexto.Festivos.Include(f => f.TipoDias).ToListAsync();
+            return await Context.Festivos.Include(f => f.TipoDias).ToListAsync();
         }
     }
 }
