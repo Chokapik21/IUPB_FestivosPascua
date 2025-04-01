@@ -1,0 +1,119 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "FestivosPascua.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "FestivosPascua.Dominio": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/FestivosPascua.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FestivosPascua.Core.dll": {}
+        }
+      },
+      "FestivosPascua.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/FestivosPascua.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FestivosPascua.Dominio.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FestivosPascua.Core/1.0.0": {
+      "type": "project",
+      "path": "../FestivosPascua.Core/FestivosPascua.Core.csproj",
+      "msbuildProject": "../FestivosPascua.Core/FestivosPascua.Core.csproj"
+    },
+    "FestivosPascua.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../FestivosPascua.Dominio/FestivosPascua.Dominio.csproj",
+      "msbuildProject": "../FestivosPascua.Dominio/FestivosPascua.Dominio.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "FestivosPascua.Core >= 1.0.0",
+      "FestivosPascua.Dominio >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Walter Misas\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\Festivos.Pascua.Aplicaciones\\Festivos.Pascua.Aplicacion.csproj",
+      "projectName": "Festivos.Pascua.Aplicacion",
+      "projectPath": "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\Festivos.Pascua.Aplicaciones\\Festivos.Pascua.Aplicacion.csproj",
+      "packagesPath": "C:\\Users\\Walter Misas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\Festivos.Pascua.Aplicaciones\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Walter Misas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\FestivosPascua.Core\\FestivosPascua.Core.csproj": {
+              "projectPath": "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\FestivosPascua.Core\\FestivosPascua.Core.csproj"
+            },
+            "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\FestivosPascua.Dominio\\FestivosPascua.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\FestivosPascua.Dominio\\FestivosPascua.Dominio.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

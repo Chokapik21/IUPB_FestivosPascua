@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{43073296-CB19-4745-9B48-1D940355F6B0}|FestivosPascua.Infrastructura\\FestivosPascua.Infrastructura.csproj|c:\\users\\davinson\\onedrive\\escritorio\\iupb_festivospascua\\festivospascua.infrastructura\\festivosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43073296-CB19-4745-9B48-1D940355F6B0}|FestivosPascua.Infrastructura\\FestivosPascua.Infrastructura.csproj|solutionrelative:festivospascua.infrastructura\\festivosrepositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\Walter Misas\\Desktop\\herramientas3\\IUPB_FestivosPascua\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FestivosRepositorio.cs",
-              "DocumentMoniker": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
-              "RelativeDocumentMoniker": "FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
-              "ToolTip": "C:\\Users\\Davinson\\OneDrive\\Escritorio\\IUPB_FestivosPascua\\FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
-              "RelativeToolTip": "FestivosPascua.Infrastructura\\FestivosRepositorio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:52:33.798Z",
-              "EditorCaption": ""
             }
           ]
         }
