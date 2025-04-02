@@ -1,6 +1,6 @@
 ﻿using FestivosPascua.Dominio.Entidades;
 
-namespace FestivosPascua.Core.Repositorio
+namespace FestivosPascua.Core.Repositorios
 {
     public interface IFestivoRepositorio
     {

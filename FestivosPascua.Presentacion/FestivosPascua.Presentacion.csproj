@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Festivos.Pascua.Aplicaciones\Festivos.Pascua.Aplicacion.csproj" />
+    <ProjectReference Include="..\Festivos.Pascua.Aplicaciones\FestivosPascua.Aplicacion.csproj" />
     <ProjectReference Include="..\FestivosPascua.Dominio\FestivosPascua.Dominio.csproj" />
     <ProjectReference Include="..\FestivosPascua.Infrastructura\FestivosPascua.Infrastructura.Repositorios.csproj" />
     <ProjectReference Include="..\FestivosPascua.Persistencia\FestivosPascua.Infrastructura.Persistencia.csproj" />

@@ -1,4 +1,4 @@
-﻿using FestivosPascua.Core.Repositorio;
+﻿using FestivosPascua.Core.Repositorios;
 using FestivosPascua.Dominio.Entidades;
 using FestivosPascua.Persistencia.Contexto;
 using Microsoft.EntityFrameworkCore;
@@ -60,13 +60,13 @@ namespace FestivosPascua.Infraestructura.Repositorios
 
         public async Task<ClsFestivos> Obtener(int Id)
         {
-            return await Context.Festivos.Include(f => f.TipoDias)
+            return await Context.Festivos.Include(f => f.Tipo)
                                          .FirstOrDefaultAsync(f => f.Id == Id);
         }
 
         public async Task<IEnumerable<ClsFestivos>> ObtenerTodos()
         {
-            return await Context.Festivos.Include(f => f.TipoDias).ToListAsync();
+            return await Context.Festivos.Include(f => f.Tipo).ToListAsync();
         }
     }
 }

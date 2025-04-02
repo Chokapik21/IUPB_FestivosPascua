@@ -13,15 +13,15 @@ namespace FestivosPascua.Persistencia.Contexto
         public DbSet<ClsTipo> Tipos { get; set; }
         public DbSet<ClsFestivos> Festivos { get; set; }
 
-        void OnModelCreating(ModelBuilder builder)
+        void OnModelCreating(ModelBuilder Modelbuilder)
         {
-            builder.Entity<ClsTipo>(Entidad =>
+            Modelbuilder.Entity<ClsTipo>(Entidad =>
             {
                 Entidad.HasKey(e => e.Id);
                 Entidad.HasIndex(e => e.Nombre).IsUnique();
             });
 
-            builder.Entity<ClsFestivos>(Entidad =>
+            Modelbuilder.Entity<ClsFestivos>(Entidad =>
             {
                 Entidad.HasKey(e => e.Id);
                 Entidad.HasIndex(e => e.Nombre).IsUnique();
@@ -30,8 +30,8 @@ namespace FestivosPascua.Persistencia.Contexto
                 Entidad.HasIndex(e => e.DiasPascuas).IsUnique();
             });
 
-            builder.Entity<ClsFestivos>()
-                .HasOne(e => e.TipoDias)
+            Modelbuilder.Entity<ClsFestivos>()
+                .HasOne(e => e.Tipo)
                 .WithMany()
                 .HasForeignKey(e => e.IdTipo);
         }

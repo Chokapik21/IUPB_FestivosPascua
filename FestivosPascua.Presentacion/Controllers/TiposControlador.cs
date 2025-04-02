@@ -2,7 +2,7 @@
 using FestivosPascua.Dominio.Entidades;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FestivosPascua.API.Controllers
+namespace FestivosPascua.Presentacion.Controllers
 {
     [ApiController]
     [Route("api/tipos")]

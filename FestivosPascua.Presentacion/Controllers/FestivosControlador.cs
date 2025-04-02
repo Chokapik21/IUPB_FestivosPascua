@@ -2,11 +2,11 @@
 using FestivosPascua.Dominio.Entidades;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FestivosPascua.API.Controllers
+namespace FestivosPascua.Presentacion.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class FestivosController : ControllerBase
+    [Route("api/festivo")]
+    public class FestivosController : Controller
     {
         private readonly IFestivoServicio _festivoServicio;
 
@@ -35,6 +35,12 @@ namespace FestivosPascua.API.Controllers
         {
             var nuevoFestivo = await _festivoServicio.Agregar(festivo);
             return CreatedAtAction(nameof(Obtener), new { id = nuevoFestivo.Id }, nuevoFestivo);
+        }
+
+        [HttpGet("buscar/{Tipo}/{Dato}")]
+        public async Task<IEnumerable<ClsFestivos>> Buscar(int Tipo, string Dato)
+        {
+            return await _festivoServicio.Buscar(Tipo, Dato);
         }
 
         [HttpPut("modificar/{id}")]

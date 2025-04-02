@@ -4,11 +4,16 @@ namespace FestivosPascua.Core.Servicios
 {
     public interface IFestivoServicio
     {
-        Task<ClsFestivos> Agregar(ClsFestivos festivo);
-        Task<IEnumerable<ClsFestivos>> Buscar(int tipo, string dato);
-        Task<bool> Eliminar(int id);
-        Task<ClsFestivos> Modificar(ClsFestivos festivo);
-        Task<ClsFestivos> Obtener(int id);
         Task<IEnumerable<ClsFestivos>> ObtenerTodos();
+
+        Task<ClsFestivos> Obtener(int Id);
+
+        Task<ClsFestivos> Agregar(ClsFestivos Festivo);
+
+        Task<ClsFestivos> Modificar(ClsFestivos Festivo);
+
+        Task<bool> Eliminar(int Id);
+
+        Task<IEnumerable<ClsFestivos>> Buscar(int Tipo, string Dato);
     }
 }

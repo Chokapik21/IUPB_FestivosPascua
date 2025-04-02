@@ -1,11 +1,11 @@
-﻿using FestivosPascua.Core.Repositorio;
+﻿using FestivosPascua.Core.Repositorios;
 using FestivosPascua.Core.Servicios;
 using FestivosPascua.Dominio.Entidades;
 
 
-namespace Festivos.Pascua.Aplicacion.Servicios
+namespace FestivosPascua.Aplicacion.Servicios
 {
-    internal class FestivosServicio : IFestivoServicio
+    public class FestivosServicio : IFestivoServicio
     {
         private readonly IFestivoRepositorio repositorio;
 

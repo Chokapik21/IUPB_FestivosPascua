@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace FestivosPascua.Dominio.Entidades
 {
-    [Table("Festivos")]
+    [Table("Festivo")]
     public class ClsFestivos
     {
         [Column("Id")]
@@ -19,12 +19,13 @@ namespace FestivosPascua.Dominio.Entidades
         [Column("Mes")]
         public int Mes { get; set; }
 
-        [Column("DiasPascuas")]
+        [Column("DiasPascua")]
         public int DiasPascuas { get; set; }
 
         [Column("IdTipo")]
         public int IdTipo { get; set; }
 
-        public ClsTipo TipoDias { get; set; }
+        [ForeignKey("IdTipo")]
+        public ClsTipo Tipo { get; set; }
     }
 }

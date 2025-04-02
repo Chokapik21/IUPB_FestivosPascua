@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FestivosPascua.Core", "Fest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FestivosPascua.Infrastructura.Repositorios", "FestivosPascua.Infrastructura\FestivosPascua.Infrastructura.Repositorios.csproj", "{43073296-CB19-4745-9B48-1D940355F6B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Festivos.Pascua.Aplicacion", "Festivos.Pascua.Aplicaciones\Festivos.Pascua.Aplicacion.csproj", "{B7A82F8C-2665-4822-B2E0-D78B64CD8856}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FestivosPascua.Aplicacion", "Festivos.Pascua.Aplicaciones\FestivosPascua.Aplicacion.csproj", "{B7A82F8C-2665-4822-B2E0-D78B64CD8856}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FestivosPascua.Presentacion", "FestivosPascua.Presentacion\FestivosPascua.Presentacion.csproj", "{46EC54B2-6C70-49D5-9C51-409200E0EA43}"
 EndProject
