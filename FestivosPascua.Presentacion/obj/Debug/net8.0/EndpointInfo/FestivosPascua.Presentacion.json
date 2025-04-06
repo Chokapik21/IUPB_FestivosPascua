@@ -193,6 +193,47 @@
         }
       }
     },
+    "/api/festivo/generar-semana-santa": {
+      "post": {
+        "tags": [
+          "Festivos"
+        ],
+        "parameters": [
+          {
+            "name": "año",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClsTipo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClsTipo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClsTipo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/tipos": {
       "get": {
         "tags": [

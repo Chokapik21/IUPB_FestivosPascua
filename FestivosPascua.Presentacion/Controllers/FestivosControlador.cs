@@ -62,5 +62,19 @@ namespace FestivosPascua.Presentacion.Controllers
 
             return NoContent();
         }
+
+        [HttpPost("generar-semana-santa")]
+        public async Task<IActionResult> GenerarSemanaSanta([FromQuery] int año, [FromBody] ClsTipo tipo)
+        {
+            var festivos = await _festivoServicio.GenerarSemanaSanta(año, tipo);
+
+            // Opcional: guardar cada festivo en la base de datos
+            foreach (var festivo in festivos)
+            {
+                await _festivoServicio.Agregar(festivo);
+            }
+
+            return Ok(festivos);
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using FestivosPascua.Core.Repositorios;
 using FestivosPascua.Core.Servicios;
+using FestivosPascua.Core.Utilidades;
 using FestivosPascua.Dominio.Entidades;
 
 
@@ -42,6 +43,18 @@ namespace FestivosPascua.Aplicacion.Servicios
         public async Task<IEnumerable<ClsFestivos>> ObtenerTodos()
         {
             return await repositorio.ObtenerTodos();
+        }
+
+        public async Task<IEnumerable<ClsFestivos>> GenerarSemanaSanta(int año, ClsTipo tipoSemanaSanta)
+        {
+            var festivos = ClsCalcularFestivo.ValidarFechas(año, tipoSemanaSanta);
+
+            /*foreach (var festivo in festivos)
+            {
+                await repositorio.Agregar(festivo);
+            }*/
+
+            return festivos;
         }
     }
 }

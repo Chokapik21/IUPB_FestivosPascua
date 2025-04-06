@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-
+using System.Security.Cryptography;
 
 namespace FestivosPascua.Dominio.Entidades
 {
@@ -29,3 +29,4 @@ namespace FestivosPascua.Dominio.Entidades
         public ClsTipo Tipo { get; set; }
     }
 }
+    

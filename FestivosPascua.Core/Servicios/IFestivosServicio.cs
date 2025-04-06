@@ -15,5 +15,7 @@ namespace FestivosPascua.Core.Servicios
         Task<bool> Eliminar(int Id);
 
         Task<IEnumerable<ClsFestivos>> Buscar(int Tipo, string Dato);
+
+        Task<IEnumerable<ClsFestivos>> GenerarSemanaSanta(int año, ClsTipo tipoSemanaSanta);
     }
 }

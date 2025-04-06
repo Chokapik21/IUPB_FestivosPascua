@@ -64,6 +64,27 @@
   },
   {
     "ContainingType": "FestivosPascua.Presentacion.Controllers.FestivosController",
+    "Method": "GenerarSemanaSanta",
+    "RelativePath": "api/festivo/generar-semana-santa",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "a\u00F1o",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "tipo",
+        "Type": "FestivosPascua.Dominio.Entidades.ClsTipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FestivosPascua.Presentacion.Controllers.FestivosController",
     "Method": "ObtenerTodos",
     "RelativePath": "api/festivo/listar",
     "HttpMethod": "GET",
