@@ -44,17 +44,10 @@ namespace FestivosPascua.Aplicacion.Servicios
         {
             return await repositorio.ObtenerTodos();
         }
-
-        public async Task<IEnumerable<ClsFestivos>> GenerarSemanaSanta(int año, ClsTipo tipoSemanaSanta)
+        public async Task<string> ValidarFecha(DateTime fecha)
         {
-            var festivos = ClsCalcularFestivo.ValidarFechas(año, tipoSemanaSanta);
-
-            /*foreach (var festivo in festivos)
-            {
-                await repositorio.Agregar(festivo);
-            }*/
-
-            return festivos;
+            var festivos = await repositorio.ObtenerTodosFestivos();
+            return ClsCalcularFestivo.EsFestivo(fecha, festivos);
         }
     }
 }

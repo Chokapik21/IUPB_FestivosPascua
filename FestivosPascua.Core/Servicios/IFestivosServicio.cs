@@ -4,8 +4,8 @@ namespace FestivosPascua.Core.Servicios
 {
     public interface IFestivoServicio
     {
+        Task<string> ValidarFecha(DateTime fecha);
         Task<IEnumerable<ClsFestivos>> ObtenerTodos();
-
         Task<ClsFestivos> Obtener(int Id);
 
         Task<ClsFestivos> Agregar(ClsFestivos Festivo);
@@ -15,7 +15,5 @@ namespace FestivosPascua.Core.Servicios
         Task<bool> Eliminar(int Id);
 
         Task<IEnumerable<ClsFestivos>> Buscar(int Tipo, string Dato);
-
-        Task<IEnumerable<ClsFestivos>> GenerarSemanaSanta(int año, ClsTipo tipoSemanaSanta);
     }
 }

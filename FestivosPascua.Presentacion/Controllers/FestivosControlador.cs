@@ -1,4 +1,5 @@
 ﻿using FestivosPascua.Core.Servicios;
+using FestivosPascua.Core.Utilidades;
 using FestivosPascua.Dominio.Entidades;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,10 +16,32 @@ namespace FestivosPascua.Presentacion.Controllers
             _festivoServicio = festivoServicio;
         }
 
-        [HttpGet("listar")]
-        public async Task<IActionResult> ObtenerTodos()
+        [HttpGet("validar")]
+        public async Task<IActionResult> Validar(int? anio, int? mes, DateTime? fecha)
         {
-            var festivos = await _festivoServicio.ObtenerTodos();
+            var festivosEnumerable = await _festivoServicio.ObtenerTodos(); 
+            var festivos = festivosEnumerable.ToList(); 
+
+            if (fecha.HasValue)
+            {
+                var resultado = ClsCalcularFestivo.EsFestivo(fecha.Value, festivos);
+                return Ok(resultado);
+            }
+            else if (anio.HasValue && mes.HasValue)
+            {
+                var lista = ClsCalcularFestivo.ObtenerFestivosDelMes(anio.Value, mes.Value, festivos);
+                return Ok(lista);
+            }
+            else
+            {
+                return BadRequest("Debes enviar una fecha o al menos el año y el mes.");
+            }
+        }
+
+        [HttpGet]
+        public IActionResult ObtenerTodos()
+        {
+            var festivos = _festivoServicio.ObtenerTodos();
             return Ok(festivos);
         }
 
@@ -63,18 +86,6 @@ namespace FestivosPascua.Presentacion.Controllers
             return NoContent();
         }
 
-        [HttpPost("generar-semana-santa")]
-        public async Task<IActionResult> GenerarSemanaSanta([FromQuery] int año, [FromBody] ClsTipo tipo)
-        {
-            var festivos = await _festivoServicio.GenerarSemanaSanta(año, tipo);
-
-            // Opcional: guardar cada festivo en la base de datos
-            foreach (var festivo in festivos)
-            {
-                await _festivoServicio.Agregar(festivo);
-            }
-
-            return Ok(festivos);
-        }
+        
     }
 }

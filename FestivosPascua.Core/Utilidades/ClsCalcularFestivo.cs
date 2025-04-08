@@ -4,12 +4,59 @@ namespace FestivosPascua.Core.Utilidades
 {
     public static class ClsCalcularFestivo
     {
-        public static List<ClsFestivos> ValidarFechas(int año, ClsTipo tipoSemanaSanta)
+        public static string EsFestivo(DateTime fecha, List<ClsFestivos> festivos)
         {
-            // Cálculo correcto del Domingo de Pascua usando el algoritmo de Meeus
-            int a = año % 19;
-            int b = año / 100;
-            int c = año % 100;
+            foreach (var festivo in festivos)
+            {
+                DateTime fechaFestivo;
+
+                switch (festivo.IdTipo)
+                {
+                    case 1: //Fijo
+                        fechaFestivo = new DateTime(fecha.Year, festivo.Mes, festivo.Dia);
+                        break;
+
+                    case 2: //Ley Puente Festivo
+                        fechaFestivo = AjustarAlLunes(new DateTime(fecha.Year, festivo.Mes, festivo.Dia));
+                        break;
+
+                    case 3: //Basado en Pascua
+                        var pascua = CalcularPascua(fecha.Year);
+                        fechaFestivo = pascua.AddDays(festivo.DiasPascuas);
+                        break;
+
+                    case 4: //Pascua + Ley Puente
+                        var basePascua = CalcularPascua(fecha.Year).AddDays(festivo.DiasPascuas);
+                        fechaFestivo = AjustarAlLunes(basePascua);
+                        break;
+
+                    default:
+                        continue;
+                }
+
+                if (fechaFestivo.Date == fecha.Date)
+                    return $"Es festivo: {festivo.Nombre}";
+            }
+
+            return "No es festivo.";
+        }
+
+        //Calcula el primer lunes después de la fecha (incluyéndola si ya es lunes)
+        private static DateTime AjustarAlLunes(DateTime fecha)
+        {
+            while (fecha.DayOfWeek != DayOfWeek.Monday)
+            {
+                fecha = fecha.AddDays(1);
+            }
+            return fecha;
+        }
+
+        //Cálculo de la fecha de Pascua para un año dado (método de Gauss)
+        private static DateTime CalcularPascua(int year)
+        {
+            int a = year % 19;
+            int b = year / 100;
+            int c = year % 100;
             int d = b / 4;
             int e = b % 4;
             int f = (b + 8) / 25;
@@ -22,63 +69,50 @@ namespace FestivosPascua.Core.Utilidades
             int mes = (h + l - 7 * m + 114) / 31;
             int dia = ((h + l - 7 * m + 114) % 31) + 1;
 
-            DateTime domingoPascua = new DateTime(año, mes, dia);
-            DateTime domingoRamos = domingoPascua.AddDays(-7);
-            DateTime juevesSanto = domingoPascua.AddDays(-3);
-            DateTime viernesSanto = domingoPascua.AddDays(-2);
-            DateTime lunesPascua = domingoPascua.AddDays(1);
+            return new DateTime(year, mes, dia);
+        }
 
-            // Lista de festivos
-            var festivos = new List<ClsFestivos>
+        public static List<string> ObtenerFestivosDelMes(int anio, int mes, List<ClsFestivos> festivos)
         {
-            new ClsFestivos
-            {
-                Nombre = "Domingo de Ramos",
-                Dia = domingoRamos.Day,
-                Mes = domingoRamos.Month,
-                DiasPascuas = -7,
-                IdTipo = tipoSemanaSanta.Id,
-                Tipo = tipoSemanaSanta
-            },
-            new ClsFestivos
-            {
-                Nombre = "Jueves Santo",
-                Dia = juevesSanto.Day,
-                Mes = juevesSanto.Month,
-                DiasPascuas = -3,
-                IdTipo = tipoSemanaSanta.Id,
-                Tipo = tipoSemanaSanta
-            },
-            new ClsFestivos
-            {
-                Nombre = "Viernes Santo",
-                Dia = viernesSanto.Day,
-                Mes = viernesSanto.Month,
-                DiasPascuas = -2,
-                IdTipo = tipoSemanaSanta.Id,
-                Tipo = tipoSemanaSanta
-            },
-            new ClsFestivos
-            {
-                Nombre = "Domingo de Pascua",
-                Dia = domingoPascua.Day,
-                Mes = domingoPascua.Month,
-                DiasPascuas = 0,
-                IdTipo = tipoSemanaSanta.Id,
-                Tipo = tipoSemanaSanta
-            },
-            new ClsFestivos
-            {
-                Nombre = "Lunes de Pascua",
-                Dia = lunesPascua.Day,
-                Mes = lunesPascua.Month,
-                DiasPascuas = 1,
-                IdTipo = tipoSemanaSanta.Id,
-                Tipo = tipoSemanaSanta
-            }
-        };
+            List<string> festivosDelMes = new List<string>();
 
-            return festivos;
+            //Calcular la fecha del Domingo de Pascua una sola vez
+            DateTime pascua = CalcularPascua(anio);
+
+            foreach (var festivo in festivos)
+            {
+                DateTime fechaFestivo;
+
+                switch (festivo.IdTipo)
+                {
+                    case 1: //Fijo
+                        fechaFestivo = new DateTime(anio, festivo.Mes, festivo.Dia);
+                        break;
+
+                    case 2: //Ley de puente festivo
+                        fechaFestivo = AjustarAlLunes(new DateTime(anio, festivo.Mes, festivo.Dia));
+                        break;
+
+                    case 3: //Basado en Pascua
+                        fechaFestivo = pascua.AddDays(festivo.DiasPascuas);
+                        break;
+
+                    case 4: //Pascua + Ley del puente
+                        var fechaBase = pascua.AddDays(festivo.DiasPascuas);
+                        fechaFestivo = AjustarAlLunes(fechaBase);
+                        break;
+
+                    default:
+                        continue;
+                }
+
+                if (fechaFestivo.Month == mes)
+                {
+                    festivosDelMes.Add($"{fechaFestivo:dd/MM/yyyy} - {festivo.Nombre}");
+                }
+            }
+
+            return festivosDelMes;
         }
     }
 }

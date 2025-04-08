@@ -5,7 +5,45 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/festivo/listar": {
+    "/api/festivo/validar": {
+      "get": {
+        "tags": [
+          "Festivos"
+        ],
+        "parameters": [
+          {
+            "name": "anio",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "mes",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "fecha",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/festivo": {
       "get": {
         "tags": [
           "Festivos"
@@ -186,47 +224,6 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/festivo/generar-semana-santa": {
-      "post": {
-        "tags": [
-          "Festivos"
-        ],
-        "parameters": [
-          {
-            "name": "año",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClsTipo"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClsTipo"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClsTipo"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "Success"

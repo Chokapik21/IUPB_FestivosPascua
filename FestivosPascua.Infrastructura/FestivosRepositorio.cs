@@ -68,6 +68,12 @@ namespace FestivosPascua.Infraestructura.Repositorios
         {
             return await Context.Festivos.Include(f => f.Tipo).ToListAsync();
         }
+        public async Task<List<ClsFestivos>> ObtenerTodosFestivos()
+        {
+            return await Context.Festivos.Include(f => f.Tipo).ToListAsync();
+        }
+
+
     }
 }
 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FestivosPascua.Aplicacion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3824c532e5c913c7edcbfa30bb5a9ad4d67dab5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14ef37ea3f4c5b87e441e8d3835794b9c6c9f84c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FestivosPascua.Aplicacion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FestivosPascua.Aplicacion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
