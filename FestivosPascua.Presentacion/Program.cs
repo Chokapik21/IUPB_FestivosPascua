@@ -2,10 +2,22 @@ using FestivosPascua.Presentacion.DI;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
 // Add services to the container.
 var configuracion = builder.Configuration;
 
 builder.Services.AgregarDependencias(configuracion);
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirTodo", policy =>
+    {
+        policy.AllowAnyOrigin()
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -14,12 +26,17 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseCors("PermitirTodo");
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+
+
 
 app.UseHttpsRedirection();
 
